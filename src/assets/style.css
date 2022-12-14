@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200&family=Roboto:wght@100;300;400;500;700&family=Secular+One&display=swap");
+
+
+
+/* :root {
+    --colorWhite: #ffffff;
+    --colorBlack: #000000;
+    --colorRed: red;
+    --fontSize-sm: 16px;
+    --fontFamily: 'Arial, Helvetica, sans-serif';
+    --fontTitle: 'Arial';
+    --fontBody: 'Helvetica';
+} */
+
+:root {
+    --radius: 7% 7% 8% 8% / 13% 13% 13% 13%;
+}
+
+/* SignIn Component */
+/* .container-flex-row {width: 90vw;
+    height: 100vw;
+    background: linear-gradient(135deg, #474bff 25%, transparent 25%) -33px 0/ 66px 66px, linear-gradient(225deg, rgba(71,75,255,0.5) 25%, transparent 25%) -33px 0/ 66px 66px, linear-gradient(315deg, #474bff 25%, transparent 25%) 0 0/ 66px 66px, linear-gradient(45deg, rgba(71,75,255,0.5) 25%, #47d3ff 25%) 0 0/ 66px 66px;
+    background-color: #47d3ff;} */
+
+
+
+
+
+* {
+    padding-left: 1px;
+    padding-right: 5px;
+    box-sizing: border-box;
+    font-family: 'Secular One', sans-serif;
+}
+
+body {
+    background-color: #EFF7FF;
+    /* background-image: linear-gradient(rgb(147, 154, 9), rgb(165, 176, 212)); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(232, 241, 232);
+
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container-flex {
+    background-image: url(./imgs/antonio-uquiche-279jjKbZ3wA-unsplash.jpg);
+    background-size: 45vw 100vh;
+    background-repeat: no-repeat;
+
+    width: 97vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+.header {
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+
+.container-flex p {
+    color: #343a40;
+}
+
+.container-flex form {
+    color: #343a40
+}
+
+.container-flex button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3772ff;
+    color: whitesmoke;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 20px;
+    cursor: pointer;
+
+
+
+    height: 21px;
+
+    border: none;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px
+}
+
+/* h1 {
+    color: var(--colorRed);
+} */
+
+/* SignUp Component */
+
+/* Home view */
+
+/* Account View */
+
+
+/* Nav Component */
+nav {
+    background-color: #fefee3;
+    color: black;
+}
+
+.btn-logout {
+    background-color: #e5e5e5;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: var(--radius);
+
+}
+
+/* NewTask Component */
+.input-field {
+    display: grid;
+    justify-content: center;
+}
+
+input {
+    width: 50vw
+}
+
+.btn-add {
+    background-color: #219ebc;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+
+
+}
+
+/* TaskItem Component */
+.container-task {
+    background-color: #faedcd;
+    width: 30vw;
+    height: 40vh;
+    border-radius: var(--radius);
+    border-style: solid;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+@media only screen and (max-width: 400px) {
+
+
+    .container-task {
+        width: 90vw;
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 3px;
+    }
+
+
+
+
+
+    b {
+        display: none;
+    }
+
+
+    .btn-container {
+        width: 75vw;
+        height: 10vh;
+        display: flex;
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+
+    }
+
+    #editmode {
+        width: 56vw;
+        margin: 3px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .input-field-task-title {
+        margin-left: 10px;
+        align-self: center;
+    }
+
+    .input-field-task-description {
+        margin-top: 0px 0px 0px 0px;
+        align-self: center;
+    }
+
+    -btn-save-container {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .btn-save {
+        align-self: flex-start;
+
+        background-color: black;
+
+        width: 44px;
+
+        height: 38px;
+    }
+}
+
+
+
+/* .container-task:nth-child(2n) {
+    background: #f4a261;
+}
+
+.container-task:nth-child(3n) {
+    background: #c77dff
+}
+
+.container-task:nth-child(4n) {
+    background-color: #ff5d8f;
+} */
+
+.titolo {
+    text-transform: uppercase;
+    width: 10vw;
+}
+
+.paragrafo {
+    color: #495057;
+    max-width: 300px;
+}
+
+.btn-container {
+    display: flex;
+}
+
+
+
+.btn-edit {
+    /* background-color:#fee440 ; */
+    background-color: #ffee32;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: var(--radius)
+}
+
+.btn-save {
+    /* background-color: ; */
+    background-color: #38b000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: var(--radius)
+}
+
+.btn-completed {
+    background-color: #76c893;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: var(--radius)
+}
+
+.btn-complete {
+    background-color: #99d6ea;
+    border-radius: var(--radius);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-delete {
+    background-color: #ff686b;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: var(--radius)
+}
+
+.input-field-task {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.input-field-task-title {
+    background-color: inherit;
+    /* background-image: linear-gradient(rgb(147, 154, 9), rgb(165, 176, 212)); */
+    resize: vertical;
+    border: none;
+}
+
+
+.input-field-task-description {
+    background-color: inherit;
+    /* background-image: linear-gradient(rgb(15, 222, 177), rgb(54, 60, 78)); */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    resize: vertical;
+    border: none;
+}
+
+
+/* HomeView */
+
+h1 {
+    color: black;
+    text-align: center;
+    ;
+}
+
+h4 {
+    color: black;
+}
+
+.taskItem {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 50px;
+
+}
+
+@media only screen and (max-width:400px) {
+    .taskItem {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*  */
