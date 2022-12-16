@@ -7,10 +7,32 @@
           : `container-task-text-not-completed`
       "
     > -->
+    <div id="editmode" v-if="editMode" class="input-field-task">
+      <textarea
+        class="input-field-task-title"
+        type="text"
+        placeholder="Edit title"
+        v-model="title"
+        cols="15"
+        rows="2"
+      ></textarea>
 
-    <div class="tarea">
-      <h4 class="titolo">{{ task.title }}</h4>
+      <textarea
+        class="input-field-task-description"
+        type="text"
+        placeholder="Edit description"
+        v-model="description"
+        cols="15"
+        rows="2"
+      ></textarea>
+      <button @click="updateTask" class="btn-save">
+        <span class="material-symbols-outlined"> save </span> <b>Save</b>
+      </button>
+    </div>
+    <div class="tarea" v-else>
       <p class="paragrafo">{{ task.description }}</p>
+      <h4 class="titolo">{{ task.title }}</h4>
+      <p id="date">{{ time.split("-").reverse().join("/") }}</p>
     </div>
 
     <!-- </div> -->
@@ -44,33 +66,11 @@
         "
       >
         <span class="material-symbols-outlined"> check </span>
-        <b>{{ task.is_complete ? "Completed!" : "Complete Task" }}</b>
+        <b>{{ task.is_complete ? "Completed!" : "Complete" }}</b>
       </button>
 
       <button @click="deleteTask" class="btn-delete button">
         <span class="material-symbols-outlined"> delete </span> <b>Delete</b>
-      </button>
-    </div>
-    <div id="editmode" v-show="editMode" class="input-field-task">
-      <textarea
-        class="input-field-task-title"
-        type="text"
-        placeholder="Edit title"
-        v-model="title"
-        cols="15"
-        rows="2"
-      ></textarea>
-
-      <textarea
-        class="input-field-task-description"
-        type="text"
-        placeholder="Edit description"
-        v-model="description"
-        cols="15"
-        rows="2"
-      ></textarea>
-      <button @click="updateTask" class="btn-save">
-        <span class="material-symbols-outlined"> save </span> <b>Save</b>
       </button>
     </div>
   </div>
@@ -94,7 +94,12 @@ const editMode = ref(false);
 let title = ref(props.task.title);
 console.log(title);
 console.log(props.task.title);
+console.log(props.task.inserted_at);
+console.log(props.task.inserted_at.slice(0, 10));
 let description = ref(props.task.description);
+let time = ref(props.task.inserted_at.slice(0, 10));
+console.log(time);
+
 // let isDone = ref(task.is_complete);
 let taskId = ref(props.task.id);
 
